@@ -24,7 +24,8 @@ app.use("/answer",answerRoutes)
 
 const PORT = process.env.PORT || 5000
 
-const CONNECION_URL = process.env.CONNECION_URL
+const CONNECION_URL = process.env.CONNECTION_URL
+
 
 mongoose.connect( CONNECION_URL, {useNewUrlParser: true, useUnifiedTopology: true} )
     .then(() => app.listen(PORT, () => console.log(`server running on port ${PORT}`)))
